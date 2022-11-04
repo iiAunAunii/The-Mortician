@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95353f7d0948cbf43ac67185614a68b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickUpText: {fileID: 186911912804007025, guid: 2ba8d63759548ce4ba449d48fa247891, type: 3}
+  pickUpText: {fileID: 1413744508882831677, guid: e350bc0e45e00584ba78b99042f96edf, type: 3}
   pickUpSound: {fileID: 4399928362823350850, guid: bc6d8ccdc5cc61b4c993ae427795526d, type: 3}
 --- !u!65 &7367748139980494827
 BoxCollider:

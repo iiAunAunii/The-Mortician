@@ -5,7 +5,7 @@ using TMPro;
 
 public class FlashlightAdvanced : MonoBehaviour
 {
-    public Light light;
+    public Light _light;
     public TMP_Text text;
 
     public TMP_Text batteryText;
@@ -23,10 +23,10 @@ public class FlashlightAdvanced : MonoBehaviour
 
     void Start()
     {
-        light = GetComponent<Light>();
+        _light = GetComponent<Light>();
 
         off = true;
-        light.enabled = false;
+        _light.enabled = false;
 
     }
 
@@ -40,7 +40,7 @@ public class FlashlightAdvanced : MonoBehaviour
         if (Input.GetButtonDown("flashlight") && off)
         {
             flashON.Play();
-            light.enabled = true;
+            _light.enabled = true;
             on = true;
             off = false;
         }
@@ -48,7 +48,7 @@ public class FlashlightAdvanced : MonoBehaviour
         else if (Input.GetButtonDown("flashlight") && on)
         {
             flashOFF.Play();
-            light.enabled = false;
+            _light.enabled = false;
             on = false;
             off = true;
         }
@@ -60,7 +60,7 @@ public class FlashlightAdvanced : MonoBehaviour
 
         if (lifetime <= 0)
         {
-            light.enabled = false;
+            _light.enabled = false;
             on = false;
             off = true;
             lifetime = 0;
