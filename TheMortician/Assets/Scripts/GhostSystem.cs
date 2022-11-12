@@ -7,24 +7,11 @@ public class GhostSystem : MonoBehaviour
 {
     public float damage = 20;
     public float damageTime = 1;
-    public GameObject player;
+    public GameObject FPSController;
     public bool enableDisappear = false;
     public float timeHealth = 3.0f;
     IEnumerator damagePlayer = null;
     IEnumerator healthPlayer = null;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -38,13 +25,10 @@ public class GhostSystem : MonoBehaviour
             StartCoroutine(damagePlayer);
         }
     }
-
-
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.transform.tag == "FPSController")
         {
-            enableDisappear = true;
             if (healthPlayer != null)
                 StopCoroutine(damagePlayer);
 
