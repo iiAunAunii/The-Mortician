@@ -9,6 +9,7 @@ public class Useitem : MonoBehaviour
 
     [SerializeField] private GameObject _pickUpText;
     [SerializeField] private GameObject _checkQuestText;
+    
 
 
     [SerializeField] private AudioSource _pickUpSound;
@@ -49,7 +50,8 @@ public class Useitem : MonoBehaviour
             _inReach = false;
             _pickUpText.SetActive(false);
             _checkQuestText.SetActive(true);
-            this.gameObject.SetActive(false);
+            /*this.gameObject.SetActive(false);*/
+            Destroy(this.gameObject);
         }
 
     }
