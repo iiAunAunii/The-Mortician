@@ -8,7 +8,6 @@ public class GhostSystem : MonoBehaviour
     public float damage = 20;
     public float damageTime = 1;
     public GameObject FPSController;
-    public bool enableDisappear = false;
     public float timeHealth = 3.0f;
     IEnumerator damagePlayer = null;
     IEnumerator healthPlayer = null;
@@ -17,7 +16,6 @@ public class GhostSystem : MonoBehaviour
     {
         if (other.gameObject.transform.tag == "FPSController")
         {
-            enableDisappear = true;
             if(healthPlayer != null)          
             StopCoroutine(healthPlayer);
 
